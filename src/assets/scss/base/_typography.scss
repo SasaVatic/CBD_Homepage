@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("../fonts/oswald/Oswald-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+}
+
+button,
+input,
+a {
+    font-family: inherit;
+    color: inherit;
+}
