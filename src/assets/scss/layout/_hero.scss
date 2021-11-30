@@ -1,7 +1,140 @@
+@use "../abstract" as a;
+
 .hero {
-    min-height: 100vh;
-    background-image: url("../img/hero/hero-bg.png");
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../img/shadow.png"), url("../img/hero/hero-bg.png");
+    background-position: top center, top center;
+    background-size: 100% auto, cover;
+    background-repeat: no-repeat, no-repeat;
+
+    &__wrapper {
+        padding: 180px 0 200px 0;
+
+        @include a.tablet {
+            padding: max(280px, 19.5%) 0 max(250px, 15.2%) 0;
+        }
+    }
+
+    &__title {
+        color: a.$text-primary;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+
+        @include a.tablet {
+            text-align: end;
+            max-width: 1260px;
+            padding-right: 40px;
+        }
+    }
+
+    &__heading {
+        font-size: clamp(30px, 4vw, 55px);
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: clamp(2px, 1vw, 15.4px);
+
+        @include a.tablet {
+            line-height: 1.37;
+            transform: translateX(10px);
+        }
+
+        &--sub {
+            display: block;
+            font-size: clamp(15px, 2vw, 24px);
+            text-transform: none;
+            font-weight: 300;
+            letter-spacing: clamp(2px, 1vw, 6.7px);
+            margin-top: 10px;
+
+            @include a.tablet {
+                margin-top: 1.6%;
+                transform: translateX(-10px);
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: clamp(15px, 1.5vw, 18px);
+        font-weight: 300;
+        margin-top: 20px;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            text-shadow: 2px 2px 2px rgba(#000, 0.8);
+            transform: scale(1.1);
+        }
+
+        span {
+            display: inline-block;
+            font-size: clamp(20px, 3vw, 25px);
+            font-weight: 300;
+            animation: animate-arrow 1s ease infinite;
+        }
+
+        @keyframes animate-arrow {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+            0% {
+                transform: translateX(0);
+            }
+        }
+
+        @include a.tablet {
+            margin-top: 1.2%;
+            transform: translateX(-10px);
+            letter-spacing: 5px;
+        }
+    }
+
+    &__link-arrow {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: arrow-yoyo 1.5s ease infinite;
+
+        @keyframes arrow-yoyo {
+            from,
+            to {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, 7px);
+            }
+        }
+    }
+
+    &__aside {        
+        &-text {
+            display: none;
+            
+            @include a.tablet {
+                display: inline-flex;
+                align-items: center;
+                position: absolute;
+                left: 3.7%;
+                bottom: -20px;
+                transform-origin: left center;
+                transform: rotate(-90deg);
+                font-size: clamp(16px, 2vw, 26px);
+                letter-spacing: 2.1px;
+                text-transform: uppercase;
+                color: a.$text-primary;
+            }
+        }
+
+        &-line {
+            display: inline-block;
+            width: 100px;
+            height: 2px;
+            background-color: #fff;
+            margin-right: 31px;
+        }
+    }
 }

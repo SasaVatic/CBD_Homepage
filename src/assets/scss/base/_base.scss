@@ -1,3 +1,5 @@
+@use "../abstract" as a;
+
 *,
 *::before,
 *::after {
@@ -6,9 +8,12 @@
     box-sizing: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     box-sizing: border-box;
-    min-height: 100vh;
 }
 
 a {
@@ -19,11 +24,10 @@ ul {
     list-style: none;
 }
 
-.shadow-layer {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/shadow.png);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+img {
+    max-width: 100%;
+}
+
+main {
+    background-color: a.$main-bg;
 }

@@ -11,15 +11,14 @@
     @include a.tablet {
         padding: 0;
         width: 100%;
-        border-bottom: a.$nav-border;
     }
-
+    
     &__items {
         position: fixed;
         text-align: center;
         text-transform: uppercase;
         color: a.$text-primary;
-        background-color: rgba($color: #000, $alpha: 0.8);
+        background-color: rgba($color: #000, $alpha: 0.9);
         width: 100%;
         height: 50%;
         display: flex;
@@ -56,7 +55,7 @@
 
             @include a.tablet {
                 width: 382px;
-                border-left: a.$nav-border;
+                border-left: a.$border-white;
                 margin-left: 15%;
             }
         }
@@ -79,8 +78,8 @@
 
         &--enclose {
             padding: 20px 0;
-            border-top: a.$nav-border;
-            border-bottom: a.$nav-border;
+            border-top: a.$border-white;
+            border-bottom: a.$border-white;
 
             &:hover {
                 background-color: rgba(#fff, 0.2);
@@ -99,8 +98,8 @@
 
         &--search {
             @include a.tablet {
-                border-left: a.$nav-border;
-                border-right: a.$nav-border;
+                border-left: a.$border-white;
+                border-right: a.$border-white;
                 padding: 31px clamp(15px, 2.5vw, 33px) 24px clamp(15px, 2.5vw, 33px);
             }
         }
@@ -117,7 +116,7 @@
             width: calc(100% + 30px);
             height: 2px;
             background-color: a.$link-selector-color;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
@@ -126,11 +125,11 @@
         &.active::before {
             visibility: visible;
             opacity: 1;
-            transform: translateX(0);
+            transform: translate(0, -50%);
         }
 
         @include a.tablet {
-            font-size: 16px;
+            font-size: clamp(13px, 1.7vw, 16px);
             letter-spacing: 1px;
         }
     }
@@ -149,8 +148,6 @@
         z-index: 1000;
 
         @include a.tablet {
-            // // margin: 0 0 0 40px;
-            // transform: translateX(-40%);
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -163,11 +160,16 @@
         color: a.$text-primary;
         z-index: 1000;
         background-color: transparent;
-        border: 1px solid #fff;
+        border: a.$border-white;
         padding: 6px 10px 7px 10px;
         cursor: pointer;
         line-height: 1;
         display: inline-flex;
+        transition: all 0.3s ease;
+
+        &:hover, &.active {
+            box-shadow: inset 0 0 5px #fff;
+        }
 
         &-line {
             position: relative;
