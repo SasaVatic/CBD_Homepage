@@ -110,10 +110,10 @@
         }
     }
 
-    &__aside {        
+    &__aside {
         &-text {
             display: none;
-            
+
             @include a.tablet {
                 display: inline-flex;
                 align-items: center;

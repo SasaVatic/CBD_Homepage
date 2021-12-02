@@ -3,3 +3,9 @@
         @content;
     }
 }
+
+@mixin tab-img-large {
+    @media (min-width: 1450px) {
+        @content;
+    }
+}
