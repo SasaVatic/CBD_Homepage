@@ -10,8 +10,10 @@
     display: flex;
 }
 
-.main{
+.main {
+    @include a.scroll-top;
+
     &__wrapper {
-        padding: max(5.2%, 50px) 0;
+        padding: max(5.2%, 80px) 0;
     }
 }

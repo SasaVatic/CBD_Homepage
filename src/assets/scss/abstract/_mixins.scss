@@ -1,0 +1,9 @@
+@use "./media-queries" as m;
+
+@mixin scroll-top {
+    scroll-margin-top: 65px;
+
+    @include m.tablet {
+        scroll-margin-top: 79px;
+    }
+}

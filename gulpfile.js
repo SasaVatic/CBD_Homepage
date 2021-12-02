@@ -20,6 +20,11 @@ function fonts() {
         .pipe(dest('dist/assets/fonts'));
 }
 
+function data() {
+    return src('src/assets/data/*.json')
+        .pipe(dest('dist/assets/data'));
+}
+
 function css() {
     return src('src/assets/scss/style.scss')
         .pipe(sourcemaps.init())
@@ -33,7 +38,7 @@ function css() {
 }
 
 function js() {
-    return src('src/assets/js/**/*.js')
+    return src(['./node_modules/regenerator-runtime/runtime.js', 'src/assets/js/**/*.js'])
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']
@@ -57,7 +62,7 @@ function watchTask() {
         }
     });
     watch('src/*.html', html).on('change', browserSync.reload);
-    watch('src/assets/fonts/**/*.ttf', fonts)
+    watch('src/assets/fonts/**/*.ttf', fonts);
     watch('src/assets/scss/**/*.scss', css);
     watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
     watch('src/assets/img/**/*', img);
@@ -66,6 +71,7 @@ function watchTask() {
 exports.default = series(
     html,
     fonts,
+    data,
     css,
     js,
     img,

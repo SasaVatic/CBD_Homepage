@@ -1,0 +1,31 @@
+{
+    "tabsData": [
+        {
+            "label": "what is cbd?",
+            "title": "what it is and how it works",
+            "text": "CBD is short for cannabidiol. It is a phytocannabinoid found in hemp and known for supporting the body and mind in many ways.* Charlotte’s Web products have cannabinoids with CBD extract.\nNot to be confused with oil from hemp seeds (which doesn’t contain cannabinoids), CBD comes from the flowers and leaves of the hemp plant.\nWhy does CBD work? The human body has a vast network of receptors, the endocannabinoid system.",
+            "imgUrls": [
+                "./assets/img/about/tab/tab-img-1.png",
+                "./assets/img/about/tab/tab-img-2.png"
+            ]
+        },
+        {
+            "label": "benefits",
+            "title": "benefits of using cbd",
+            "text": "Anxiety is perhaps the most common affliction that people have used CBD for, and a preclinical study found that CBD could be effective in treating generalized anxiety disorder, panic disorder, social anxiety disorder, obsessive-compulsive disorder, and post-traumatic stress disorder.\nA recent study found that CBD and other non-psychoactive cannabinoids can effectively be used to prevent and treat GI disorders such as irritable bowel syndrome (IBS), inflammatory bowel disease (IBD), Crohn's, ulcerative colitis and more. CBD’s anti-inflammatory properties are key to reducing and preventing symptoms.",
+            "imgUrls": [
+                "./assets/img/about/tab/tab-img-3.png",
+                "./assets/img/about/tab/tab-img-4.png"
+            ]
+        },
+        {
+            "label": "our difference",
+            "title": "why are we different",
+            "text": "Our products start with premium CBD. All our raw CBD comes with a certificate of analysis, which we make publicly accessible on our site. If the test results of our cannabinoids do not meet our quality standards, we will not use the batch.\nOur team of research and development experts hand-selects the other high-quality ingredients in our products such as L-Theanine, Grapeseed Oil and White Willow Bark to enhance CBD’s potential benefits.",
+            "imgUrls": [
+                "./assets/img/about/tab/tab-img-5.png",
+                "./assets/img/about/tab/tab-img-6.png"
+            ]
+        }
+    ]
+}
